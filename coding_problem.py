@@ -21,3 +21,18 @@ class Solution:
             if j not in dic:
                 dic[j]=i
         return [ dic[n] for n in nums]
+
+class Solution:
+    def findUnsortedSubarray(self, nums: List[int]) -> int:
+        start=len(nums)
+        end=0
+        if nums==sorted(nums):
+            return 0
+        else:
+            for i in range(0,len(nums)-1):
+                for j in range(i+1,len(nums)):
+                    if nums[i]>nums[j]:
+                        start=min(start,i)
+                        end=max(end,j)
+            return((end-start+1))
+
