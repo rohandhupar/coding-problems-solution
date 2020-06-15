@@ -13,3 +13,11 @@ class Solution:
             c.append(i)
         return c
 
+class Solution:
+    def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
+        dic={}
+        a=sorted(nums)
+        for i , j in enumerate(a):
+            if j not in dic:
+                dic[j]=i
+        return [ dic[n] for n in nums]
