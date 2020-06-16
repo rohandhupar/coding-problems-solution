@@ -74,3 +74,17 @@ class Solution:
                 high-=1
         nums=arr
         return nums
+class Solution:
+    def isIdealPermutation(self, A: List[int]) -> bool:
+        
+        ### every local inversion is global inversion 
+        ### using a concept where you can find minmum and take whole left 
+        ### values from minimum won't work because if case comes like 0,2,1
+        ### then concept will fail 
+        
+        ### every local inversion is gobal inversion but vice and versa is not true
+        
+        for i ,j in enumerate(A):
+            if abs(i-j)>1:
+                return False
+        return True
