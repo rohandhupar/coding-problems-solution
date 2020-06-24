@@ -1,0 +1,7 @@
+{ "operands":
+    {
+    "single_operands":["total of","total","number of","number","gross","net"],
+    "mutiple_operands":["percentage of","average","average time","average price","the ratio","ratio of"]
+    }
+
+}
