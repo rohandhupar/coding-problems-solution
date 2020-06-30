@@ -1,9 +1,0 @@
-{ "operands":
-    {
-    "single_operands":["total of","total","number of","number","gross","net"],
-    "multiple_operands":["percentage","percent","percent of","percentage of","average","ratio of","the ratio",
-        "avg","mean amount of","mean instruction","mean nominal","mean monthly","mean hourly","mean composition",
-        "mean","mean age","mean time"]
-    }
-
-}
