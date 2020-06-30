@@ -1,0 +1,65 @@
+{
+    "rule1":
+            {   
+            "number of,number,total of,total,gross,net":
+                    {
+                        "task1":[{"value1":{
+                                "measure":"yes",
+                                "operator0":"-",
+                                "string1":""
+                                    }
+                                }
+                            ]
+                    }
+            },
+    "rule2": 
+        {   
+        "percentage of,percent of,percent,percentage":
+            {
+                "task1":[{"value1":{
+                            "measure":"yes",
+                            "operator0":"-",
+                            "rule_matched":"yes",
+                            "string_after":"empty",
+                            "articles":"empty",
+                            "string_before":"empty"
+                            },
+                        "value2":{
+                            "measure":"yes",
+                            "operator0":"-",
+                            "rule_mathced":"empty",
+                            "string_before":["yes","","within","before"],
+                            "articles":"empty",
+                            "string_after":"empty"
+                            }
+                        }
+                    ],
+                "task2":[{"value1":{
+                            "measure":"yes",
+                            "operator0":"-",
+                            "rule_matched":"yes",
+                            "string_after":"empty",
+                            "articles":"empty",
+                            "string_before":"empty"
+                        },
+                    "value2":{
+                            "measure":"yes",
+                            "operator0":"-",
+                            "rule_matched":"empty",
+                            "string_after":"empty",
+                            "articles":"yes",
+                            "string_before":["yes","","of","in","to","for"]
+                            }
+                    }
+                    ]
+                        }
+            
+                }
+            }
+
+
+
+
+           
+
+    
