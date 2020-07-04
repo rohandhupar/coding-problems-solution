@@ -99,4 +99,16 @@ class Solution:
             return True
         else :
             return False
-        
+def removeX(string):
+    if len(string)==0:
+        return string 
+    smallstring=removeX(string[1:])
+    
+    if string[0]=="x":
+        return smallstring    
+    else :
+        return string[0]+smallstring 
+
+# Main
+string = input()
+print(removeX(string))
