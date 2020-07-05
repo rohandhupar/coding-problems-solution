@@ -112,3 +112,32 @@ def removeX(string):
 # Main
 string = input()
 print(removeX(string))
+def mergeSort(arr):
+    if len(arr)>1:
+        mid_value=len(arr)//2
+        left=arr[:mid_value]
+        right=arr[mid_value:]
+        left=mergeSort(left)
+        right=mergeSort(right)
+        
+        arr=[]
+        
+        while len(left)>0 and len(right)>0:
+            if left[0]<right[0]:
+                arr.append(left[0])
+                left.pop(0)
+            else:
+                arr.append(right[0])
+                right.pop(0)
+                
+        for i in left:
+            arr.append(i)
+        for i in right:
+            arr.append(i)
+    return arr 
+
+# Main
+n=int(input())
+arr=list(int(i) for i in input().strip().split(' '))
+arr=mergeSort(arr)
+print(*arr)
