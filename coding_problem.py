@@ -201,3 +201,32 @@ def towerofhanoi(n, source, aux, dest):
 
 n=int(input())
 towerofhanoi(n, 'a', 'b', 'c')
+def palindrome_check(s,si,ei):
+    if si<=ei:
+        if len(s)==0:
+            return 'false'
+        if len(s)==1:
+            return 'true'
+        elif s[si]==s[ei]:
+            return palindrome_check(s,si+1,ei-1)
+        else:
+            return 'false'
+    return 'true'
+
+## Read input as specified in the question.
+## Print output as specified in the question.
+
+
+def geometric_sum(n):
+    if n==0:
+        return 1
+        
+    return (1/2**(n)+geometric_sum(n-1))
+
+
+
+n=float(input())
+geo_sum=geometric_sum(n)
+print("{0:.5f}".format(geo_sum))
+
+    
