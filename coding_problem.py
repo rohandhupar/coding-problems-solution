@@ -277,5 +277,37 @@ def checkab(string):
 
 string=input()
 answer=checkab(string)
+print(answer)
+
+
+stepsarray=[1,2,4]
+def fibsteps(n):
+    if n<=len(stepsarray):
+        return stepsarray[n-1]
+    else:
+        steps=fibsteps(n-3)+fibsteps(n-1)+fibsteps(n-2)
+        stepsarray.append(steps)
+        return steps
+
+n=int(input())
+answer=fibsteps(n)
+print(answer)
+
+## Read input as specified in the question.
+## Print output as specified in the question.
+
+### dynamic programming solution
+stepsarray=[1,2,4]
+def fibsteps(n):
+    if n<=len(stepsarray):
+        return stepsarray[n-1]
+    else:
+        steps=fibsteps(n-3)+fibsteps(n-1)+fibsteps(n-2)
+        stepsarray.append(steps)
+        return steps
+
+n=int(input())
+
+answer=fibsteps(n)
 print(answer) 
     
