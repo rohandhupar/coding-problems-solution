@@ -262,5 +262,20 @@ def pairstar(string):
 string=input()
 answer=pairstar(string)
 print(answer)
- 
+def checkab(string):
+    if len(string)==0:
+        return "true"
+    if string[0]=="a":
+        if len(string[1:])>1 and string[1:3]=="bb":
+            return checkab(string[3:])
+        else:
+            return checkab(string[1:])
+
+    return "false" 
+
+
+
+string=input()
+answer=checkab(string)
+print(answer) 
     
