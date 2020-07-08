@@ -228,5 +228,39 @@ def geometric_sum(n):
 n=float(input())
 geo_sum=geometric_sum(n)
 print("{0:.5f}".format(geo_sum))
+## Read input as specified in the question.
+## Print output as specified in the question.
+def multi_rec(m,n):
+    if m==0 or n==0:
+        return 0
+    if m==1 :
+        return n
+    elif n==1:
+        return m 
+    elif m>n:
+        return m+multi_rec(m,n-1)
+    else:
+        return n+multi_rec(n,m-1)
 
+
+
+m=int(input())
+n=int(input())
+ans=multi_rec(m,n)
+print(ans) 
+
+def pairstar(string):
+    if len(string)==1:
+        return string
+    elif string[0]==string[1]:
+        return "".join(string[0]+"*"+pairstar(string[1:]))
+    else:
+        return "".join(string[0]+pairstar(string[1:]))
+
+
+
+string=input()
+answer=pairstar(string)
+print(answer)
+ 
     
