@@ -337,4 +337,24 @@ n = int(input())
 arr = [int(i) for i in input().strip().split()]
 print(equilibriumIndex(arr))
 
+def intersection(arr1, arr2):
+    hs=dict((x,arr1.count(x)) for x in set(arr1))
+    for j in range(len(arr2)):
+        if arr2[j] in hs:
+            if hs[arr2[j]]!=0:
+                print(arr2[j])
+                hs[arr2[j]]-=1
+
+            
+
+# Main
+n1=int(input())
+arr1=list(int(i) for i in input().strip().split(' '))
+n2=int(input())
+arr2=list(int(i) for i in input().strip().split(' '))
+arr1.sort()
+arr2.sort()
+intersection(arr1, arr2) 
+
+
     
