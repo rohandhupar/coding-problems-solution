@@ -310,4 +310,31 @@ n=int(input())
 
 answer=fibsteps(n)
 print(answer) 
+
+def equilibriumIndex(arr):
+    # Please add your code here
+    if len(arr)==1:
+        return 0
+    elif len(arr)==2:
+        return -1
+    left=0
+    right=sum(arr[1:])
+    for i in range(len(arr)):
+        if i<len(arr):
+            if left==right:
+                return i
+                break
+            elif left!=right:
+                right=right-arr[i+1]
+                left=left+arr[i]
+        else:
+            return -1
+            break
+        
+
+# Main
+n = int(input())
+arr = [int(i) for i in input().strip().split()]
+print(equilibriumIndex(arr))
+
     
